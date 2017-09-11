@@ -3,8 +3,8 @@ import { describe, it } from 'mocha';
 import { setupComponentTest } from 'ember-mocha';
 import hbs from 'htmlbars-inline-precompile';
 
-describe('Integration | Component | building object', function () {
-  setupComponentTest('building-object', {
+describe('Integration | Component | building sprite', function () {
+  setupComponentTest('building-sprite', {
     integration: true
   });
 
