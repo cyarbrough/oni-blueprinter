@@ -1,0 +1,41 @@
+/**
+  * Styles for app structure and placement
+  */
+
+* {
+  box-sizing: border-box;
+}
+
+/******************************** Z-Index */
+.blueprint-canvas {
+  z-index: 10;
+}
+
+.action-picker {
+  z-index: 15;
+}
+
+.building-picker {
+  z-index: 20;
+}
+
+/******************************** Placement */
+.action-picker {
+  bottom: 20px;
+  position: absolute;
+  right: 20px;
+}
+
+.blueprint-canvas {
+  bottom: 10px;
+  left: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.building-picker {
+  bottom: 20px;
+  left: 20px;
+  position: absolute;
+}
