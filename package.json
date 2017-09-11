@@ -11,8 +11,13 @@
   "repository": "",
   "scripts": {
     "build": "ember build",
+    "coverage": "cross-env COVERAGE=true ember test",
+    "install-app": "yarn install && bower install",
+    "deploy-dev": "git push cinedev master",
+    "deploy-prod": "git push cinetrackr master",
     "start": "ember server",
-    "test": "ember test"
+    "test": "ember test",
+    "update-app": "rm -rf node_modules bower_components dist tmp && yarn install"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

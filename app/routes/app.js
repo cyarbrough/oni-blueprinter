@@ -23,7 +23,7 @@ export default Route.extend({
     };
   },
   /**
-   * 
+   * Main model data for App
    */
   model() {
     let data = this.get('ajax').request('data/buildings.json').then((buildingData) => { return this.handleBuildingSuccess(buildingData); });
