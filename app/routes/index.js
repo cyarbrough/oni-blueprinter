@@ -1,12 +1,33 @@
 import Ember from 'ember';
-const { $, Route } = Ember;
+const { inject, Route } = Ember;
 
 export default Route.extend({
-  beforeModel() {
-    $.ajax('data/buildings.json').done((buildingData) => { this.handleBuildingSuccess(buildingData); });
-  },
+  /**
+   * Services
+   */
+  ajax: inject.service(),
+
+  /**
+   * Pushes data into the payload, returns 
+   * @param {*} buildingData 
+   * @return {*} model data
+   */
   handleBuildingSuccess(buildingData) {
-    console.log(buildingData);
-    this.get('store').pushPayload(buildingData);
+    let store = this.get('store');
+
+    store.pushPayload(buildingData);
+
+    return {
+      buildings: store.peekAll('building'),
+      categories: store.peekAll('categories')
+    };
+  },
+  /**
+   * 
+   */
+  model() {
+    let data = this.get('ajax').request('data/buildings.json').then((buildingData) => { return this.handleBuildingSuccess(buildingData); });
+
+    return data;
   }
 });

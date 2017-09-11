@@ -5,7 +5,7 @@ import { setupTest } from 'ember-mocha';
 describe('Unit | Route | index', function () {
   setupTest('route:index', {
     // Specify the other units that are required for this test.
-    // needs: ['controller:foo']
+    needs: ['service:ajax']
   });
 
   it('exists', function () {
