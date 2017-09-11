@@ -1,7 +1,8 @@
 /* eslint-env node */
 'use strict';
 
-module.exports = function(environment) {
+/* eslint-disable complexity */
+module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'oni-blueprinter',
     environment,
@@ -25,6 +26,16 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.contentSecurityPolicy = {
+      'default-src': '\'none\'',
+      'script-src': '\'self\' \'unsafe-inline\' \'unsafe-eval\'',
+      'font-src': '\'self\'',
+      'connect-src': '\'self\' http://localhost:8000 https://safe-mountain-24411.herokuapp.com',
+      'img-src': '\'self\' http://image.tmdb.org https://image.tmdb.org http://www.gravatar.com https://www.gravatar.com',
+      'style-src': '\'self\' \'unsafe-inline\' \'unsafe-eval\'',
+      'media-src': '\'self\''
+    };
+
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -43,9 +54,11 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
+  /* eslint-disable no-empty */
   if (environment === 'production') {
 
   }
 
   return ENV;
 };
+/* eslint-enable complexity, no-empty */
