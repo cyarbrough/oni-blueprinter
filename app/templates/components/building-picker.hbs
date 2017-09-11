@@ -1,0 +1,16 @@
+{{yield}}
+{{#if categories}}
+  <ul>
+    {{#each categories as |category|}}
+      <li>{{category.name}}
+        {{#if category.building}}
+          <ul>
+            {{#each category.building as |building|}}
+              <li>{{building.name}}</li>
+            {{/each}}
+          </ul>
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+{{/if}}

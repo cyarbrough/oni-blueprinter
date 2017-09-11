@@ -1,0 +1,8 @@
+{{yield}}
+{{#if actionList}}
+  <ul>
+    {{#each actionList as |action|}}
+      <li>{{action.name}}</li>
+    {{/each}}
+  </ul>
+{{/if}}

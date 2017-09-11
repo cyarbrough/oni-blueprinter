@@ -5,7 +5,7 @@ export default Ember.Component.extend({
    * Building model associated to component
    * @var {*}
    */
-  model: null,
+  building: null,
   /**
    * Holds Positional dimensions of building object
    * @var {*}

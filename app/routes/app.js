@@ -19,7 +19,7 @@ export default Route.extend({
 
     return {
       buildings: store.peekAll('building'),
-      categories: store.peekAll('categories')
+      categories: store.peekAll('category')
     };
   },
   /**
