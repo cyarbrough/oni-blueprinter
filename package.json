@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "Create blueprints & layouts for Oxygen Not Included",
   "license": "MIT",
-  "author": "",
+  "author": "C. Yarbrough <cryarbrough@gmail.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"

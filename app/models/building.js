@@ -1,5 +1,5 @@
 import DS from 'ember-data';
-const { attr, Model } = DS;
+const { attr, belongsTo, Model } = DS;
 
 export default Model.extend({
   /**
@@ -7,10 +7,7 @@ export default Model.extend({
    * @var {string}
    */
   name: attr('string'),
-  /**
-   * Category for object
-   */
-  category: attr('string'),
+
   /**
    * Image URL for building image
    * @var {string}
@@ -25,5 +22,11 @@ export default Model.extend({
    * Base width of building
    * @var {number}
    */
-  width: attr('number')
+  width: attr('number'),
+
+  /******************************** Relationships */
+  /**
+   * Category for object
+   */
+  category: belongsTo('category')
 });

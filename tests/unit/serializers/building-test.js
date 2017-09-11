@@ -5,7 +5,7 @@ import { setupModelTest } from 'ember-mocha';
 describe('Unit | Serializer | building', function () {
   setupModelTest('building', {
     // Specify the other units that are required for this test.
-    needs: ['serializer:building']
+    needs: ['serializer:building', 'model:category']
   });
 
   // Replace this with your real tests.

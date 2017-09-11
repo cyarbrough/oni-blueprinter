@@ -5,10 +5,17 @@
       "id": "1",
       "attributes": {
         "name": "Printing Pod",
-        "category": "base",
         "image": "buildings/base_hq.png",
         "height": 4,
         "width": 4
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
       }
     },
     {
@@ -16,10 +23,17 @@
       "id": "2",
       "attributes": {
         "name": "Tile",
-        "category": "base",
         "image": "buildings/base_tile_square.png",
         "height": 1,
         "width": 1
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
       }
     },
     {
@@ -27,10 +41,33 @@
       "id": "3",
       "attributes": {
         "name": "Ration Box",
-        "category": "food",
         "image": "buildings/food_rationbox.png",
         "height": 1,
         "width": 2
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "2"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "categories",
+      "id": "1",
+      "attributes": {
+        "name": "Base"
+      }
+    },
+    {
+      "type": "categories",
+      "id": "2",
+      "attributes": {
+        "name": "Food"
       }
     }
   ]
