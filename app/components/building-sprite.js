@@ -1,5 +1,5 @@
 import Ember from 'ember';
-const { Component, computed, String: { dasherize } } = Ember;
+const { Component, computed, inject, String: { dasherize } } = Ember;
 
 export default Component.extend({
   /******************************** Passed In Data */
@@ -8,11 +8,10 @@ export default Component.extend({
    * @var {*}
    */
   building: null,
-  /**
-   * Pixel ratio, number of pixel for one "unit"
-   * @var number
-   */
-  pixelRatio: 45,
+
+  /******************************** Services */
+  pixel: inject.service(),
+
   /******************************** Variables */
   /**
    * Components class names
@@ -20,6 +19,11 @@ export default Component.extend({
    */
   classNames: ['building-sprite'],
   classNameBindings: ['buildingClassName'],
+  /**
+   * Pixel density, number of pixel for one "unit"
+   * @var number
+   */
+  pixelDensity: computed.alias('pixel.density'),
   /**
    * Holds Positional dimensions of building object
    * @var {*}
@@ -48,13 +52,13 @@ export default Component.extend({
    * Pixel dimensions, converted from logistical dimensions
    * @var {*}
    */
-  dimensions: computed('building.{height,width}', 'pixelRatio', function () {
+  dimensions: computed('building.{height,width}', 'pixelDensity', function () {
     let building = this.get('building'),
-      pixelRatio = this.get('pixelRatio');
+      pixelDensity = this.get('pixelDensity');
 
     return {
-      height: String(building.get('height') * pixelRatio) + 'px',
-      width: String(building.get('width') * pixelRatio) + 'px'
+      height: String(building.get('height') * pixelDensity) + 'px',
+      width: String(building.get('width') * pixelDensity) + 'px'
     };
   })
 });
