@@ -1,3 +1,6 @@
+/**
+  * Styles for building-sprite component
+  */
 .building-sprite {
   background: none;
   background-position: bottom;
@@ -5,4 +8,26 @@
   background-size: contain;
   border: 0;
   color: $color-building-sprite-color;
+  padding: 0;
+  position: relative;
+
+  > .title {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/******************************** Custom Sprite Adjustments */
+.printing-pod {
+  > .title {
+    bottom: 65px;
+    position: absolute;
+  }
+}
+
+.ration-box {
+  > .title {
+    position: absolute;
+    top: 10px;
+  }
 }

@@ -1,5 +1,5 @@
 import Ember from 'ember';
-const { Component, computed } = Ember;
+const { Component, computed, String: { dasherize } } = Ember;
 
 export default Component.extend({
   /******************************** Passed In Data */
@@ -12,13 +12,14 @@ export default Component.extend({
    * Pixel ratio, number of pixel for one "unit"
    * @var number
    */
-  pixelRatio: 50,
+  pixelRatio: 45,
   /******************************** Variables */
   /**
    * Components class names
    * @var []
    */
   classNames: ['building-sprite'],
+  classNameBindings: ['buildingClassName'],
   /**
    * Holds Positional dimensions of building object
    * @var {*}
@@ -34,6 +35,15 @@ export default Component.extend({
    */
   tagName: 'button',
   /******************************** Computed */
+  /**
+   * Class name, based on building name
+   * @var string
+   */
+  buildingClassName: computed('building.name', function () {
+    let name = this.get('building.name');
+
+    return dasherize(name);
+  }),
   /**
    * Pixel dimensions, converted from logistical dimensions
    * @var {*}
