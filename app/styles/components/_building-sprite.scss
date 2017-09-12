@@ -9,9 +9,10 @@
   border: 0;
   color: $color-building-sprite-color;
   padding: 0;
-  position: relative;
+  position: absolute;
 
   > .title {
+    pointer-events: none;
     text-align: center;
     width: 100%;
   }

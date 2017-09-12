@@ -19,7 +19,11 @@ export default Route.extend({
 
     return {
       buildings: store.peekAll('building'),
-      categories: store.peekAll('category')
+      categories: store.peekAll('category'),
+      hq: store.peekRecord('building', '1'),
+      tile: store.peekRecord('building', '2'),
+      rationBox: store.peekRecord('building', '3'),
+      positionHQ: { x: 3, y: 3, z: 0 }
     };
   },
   /**
