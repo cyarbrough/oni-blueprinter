@@ -12,7 +12,7 @@
   "scripts": {
     "build": "ember build",
     "coverage": "cross-env COVERAGE=true ember test",
-    "install-app": "yarn install && bower install",
+    "install-app": "yarn install",
     "deploy-dev": "git push cinedev master",
     "deploy-prod": "git push cinetrackr master",
     "start": "ember server",

@@ -9,14 +9,15 @@ You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with NPM)
+* [Yarn](https://yarnpkg.com/)
 * [Ember CLI](https://ember-cli.com/)
 * [Google Chrome](https://google.com/chrome/)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
+* `git clone https://github.com/cyarbrough/oni-blueprinter` this repository
 * `cd oni-blueprinter`
-* `npm install`
+* `npm run install-app`
 
 ## Running / Development
 
