@@ -5,7 +5,7 @@
       "id": "1",
       "attributes": {
         "name": "Printing Pod",
-        "image": "images/buildings/base_hq.png",
+        "image": "/images/buildings/base_hq.png",
         "height": 4,
         "width": 4
       },
@@ -23,7 +23,7 @@
       "id": "2",
       "attributes": {
         "name": "Tile",
-        "image": "images/buildings/base_tile_square.png",
+        "image": "/images/buildings/base_tile_square.png",
         "height": 1,
         "width": 1
       },
@@ -41,7 +41,7 @@
       "id": "3",
       "attributes": {
         "name": "Ration Box",
-        "image": "images/buildings/food_ration-box.png",
+        "image": "/images/buildings/food_ration-box.png",
         "height": 2,
         "width": 2
       },
