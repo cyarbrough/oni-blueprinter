@@ -3,9 +3,9 @@
 
 <!-- blueprint-canvas -->
 {{#blueprint-canvas}}
-  {{building-sprite building=model.hq position=model.positionHQ}}
-  <br> {{building-sprite building=model.tile}}{{building-sprite building=model.tile}}{{building-sprite building=model.tile}}{{building-sprite building=model.tile}}
-  <br> {{building-sprite building=model.rationBox}}
+  {{#each templateBuildings as |buildingData|}}
+    {{building-sprite building=buildingData.model position=buildingData.position}}
+  {{/each}}
 {{/blueprint-canvas}}
 
 <!-- building picker -->
