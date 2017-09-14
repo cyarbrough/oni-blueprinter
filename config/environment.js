@@ -29,10 +29,10 @@ module.exports = function (environment) {
     ENV.contentSecurityPolicy = {
       'default-src': '\'none\'',
       'script-src': '\'self\' \'unsafe-inline\' \'unsafe-eval\'',
-      'font-src': '\'self\'',
-      'connect-src': '\'self\' http://localhost:8000 https://safe-mountain-24411.herokuapp.com',
-      'img-src': '\'self\' http://image.tmdb.org https://image.tmdb.org http://www.gravatar.com https://www.gravatar.com',
-      'style-src': '\'self\' \'unsafe-inline\' \'unsafe-eval\'',
+      'font-src': '\'self\' https://fonts.gstatic.com/',
+      'connect-src': '\'self\'',
+      'img-src': '\'self\'',
+      'style-src': '\'self\' \'unsafe-inline\' \'unsafe-eval\' https://fonts.gstatic.com/ https://fonts.googleapis.com',
       'media-src': '\'self\''
     };
 

@@ -1,16 +1,8 @@
 {{yield}}
 {{#if categories}}
-  <ul>
+  <ul class="category-list">
     {{#each categories as |category|}}
-      <li>{{category.name}}
-        {{#if category.building}}
-          <ul>
-            {{#each category.building as |building|}}
-              <li>{{building.name}}</li>
-            {{/each}}
-          </ul>
-        {{/if}}
-      </li>
+      <li class="item">{{category-icon category=category}}</li>
     {{/each}}
   </ul>
 {{/if}}

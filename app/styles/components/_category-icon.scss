@@ -1,0 +1,63 @@
+/**
+  * Styles for category-icon component
+  */
+.category-icon {
+  background: none;
+  border: 0;
+  padding: 0;
+  $icon-width: 50px;
+
+  > .icon {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
+    height: $icon-width;
+    margin: 0 auto 5px;
+    overflow: hidden;
+    position: relative;
+    width: $icon-width;
+
+    &::after,
+    &::before {
+      background-color: $color-building-menu-bgcolor;
+      content: '';
+      height: 56px;
+      position: absolute;
+      right: -3px;
+      top: -4px;
+      transform: rotate(-45deg);
+      transform-origin: 50%;
+      width: 56px;
+      z-index: -1;
+    }
+
+    &::before {
+      height: 85px;
+      left: 15px;
+      top: -15px;
+      transform: rotate(-45deg);
+      transform-origin: 50%;
+      width: 20px;
+    }
+  }
+
+  > .title {
+    color: $color-building-sprite-color;
+    font-size: 13px;
+    text-align: center;
+    width: $icon-width;
+  }
+
+  &:hover {
+    > .icon {
+      &::after,
+      &::before {
+        background-color: $color-building-menu-bgcolor-hover;
+      }
+    }
+
+    > .title {
+      font-weight: bold;
+    }
+  }
+}

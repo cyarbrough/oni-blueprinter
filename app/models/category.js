@@ -3,6 +3,11 @@ const { attr, hasMany, Model } = DS;
 
 export default Model.extend({
   /**
+   * Image URL for category image
+   * @var {string}
+   */
+  image: attr('string'),
+  /**
    * Name of object
    * @var {string}
    */

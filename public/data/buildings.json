@@ -60,14 +60,16 @@
       "type": "categories",
       "id": "1",
       "attributes": {
-        "name": "Base"
+        "name": "Base",
+        "image": "/images/menus/icon_base.png"
       }
     },
     {
       "type": "categories",
       "id": "2",
       "attributes": {
-        "name": "Food"
+        "name": "Food",
+        "image": "/images/menus/icon_food.png"
       }
     }
   ]
