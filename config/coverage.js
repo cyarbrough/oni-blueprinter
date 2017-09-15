@@ -7,5 +7,6 @@ module.exports = {
     '*/templates/**/*',
     '*/router.js',
     '*/transitions.js'
-  ]
+  ],
+  useBabelInstrumenter: true
 };

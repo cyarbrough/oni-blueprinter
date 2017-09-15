@@ -21,7 +21,7 @@ export default Route.extend({
 
     buildings.forEach(function (building) {
       model = store.peekRecord('building', String(building[0]));
-      if (model.get('id')) {
+      if (model && model.get('id')) {
         position = {
           x: building[1],
           y: building[2]
@@ -60,7 +60,7 @@ export default Route.extend({
   /**
    * Loads starter template data via ajax
    */
-  loadTemplate() {
+  async loadTemplate() {
     return this.get('ajax').request('data/template-starter.json').then((templateData) => { return this.handleTemplateSuccess(templateData); });
   },
   /**
@@ -74,13 +74,11 @@ export default Route.extend({
    * @param {*} controller 
    * @param {*} model 
    */
-  setupController(controller, model) {
+  async setupController(controller, model) {
     this._super(controller, model);
 
-    let template = this.loadTemplate();
+    let template = await this.loadTemplate();
 
-    template.then((templateData) => {
-      this.controllerFor('app').set('templateBuildings', templateData);
-    });
+    this.controllerFor('app').set('templateBuildings', template);
   }
 });
