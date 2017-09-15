@@ -1,0 +1,17 @@
+/**
+  * Styles for category-building-sprite component
+  */
+
+.category-building-button {
+  background: $color-building-canvas-bgcolor;
+  border: 1px solid;
+  color: $color-building-sprite-color;
+  margin: 0 2px 5px 0;
+  min-height: 95px;
+  width: 32%;
+
+  > .icon {
+    max-height: 100%;
+    max-width: 100%;
+  }
+}

@@ -1,6 +1,8 @@
 <div class="title">
   {{category.name}}
 </div>
-{{#each buildings as |building|}}
-  {{building.name}}
-{{/each}}
+<div class="buildings">
+  {{#each buildings as |building|}}
+    {{category-building-button building=building}}
+  {{/each}}
+</div>
