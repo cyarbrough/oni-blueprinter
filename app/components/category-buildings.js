@@ -9,27 +9,23 @@ export default Component.extend({
    */
   activeCategory: null,
   /**
+   * Building models associated to component
+   * @var {*}
+   */
+  buildings: null,
+  /**
    * Category model associated to component
    * @var {*}
    */
   category: null,
+
   /******************************** Variables */
-  /**
-   * Default action to bubble up
-   * @var string
-   */
-  actionClick: 'activateCategory',
   /**
    * Components class names
    * @var []
    */
-  classNames: ['category-icon'],
+  classNames: ['category-buildings'],
   classNameBindings: ['isActive'],
-  /**
-   * HTML Tag Name
-   * @var string
-   */
-  tagName: 'button',
 
   /******************************** Computed */
   /**
@@ -38,13 +34,5 @@ export default Component.extend({
    */
   isActive: computed('activeCategory.id', function () {
     return Boolean(this.get('activeCategory.id') === this.get('category.id'));
-  }),
-
-  /******************************** Functions */
-  /**
-   * Function called on click; Bubbles actionClick
-   */
-  click() {
-    this.sendAction('actionClick', this.get('category'));
-  }
+  })
 });

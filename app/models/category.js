@@ -2,6 +2,7 @@ import DS from 'ember-data';
 const { attr, hasMany, Model } = DS;
 
 export default Model.extend({
+  /******************************** Variables */
   /**
    * Image URL for category image
    * @var {string}
@@ -17,5 +18,5 @@ export default Model.extend({
   /**
    * Category for object
    */
-  building: hasMany('building')
+  buildings: hasMany('building')
 });

@@ -4,8 +4,13 @@
 .category-icon {
   background: none;
   border: 0;
+  cursor: pointer;
   padding: 0;
   $icon-width: 50px;
+
+  &:focus {
+    outline: 0;
+  }
 
   > .icon {
     background-position: center;
@@ -48,7 +53,8 @@
     width: $icon-width;
   }
 
-  &:hover {
+  &:hover,
+  &.is-active {
     > .icon {
       &::after,
       &::before {

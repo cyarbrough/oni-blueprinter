@@ -6,11 +6,20 @@
   > .category-list {
     margin: 0;
     padding: 0;
+    position: relative;
 
     > .item {
       display: inline-block;
       list-style: none;
       margin: 0 3px;
+
+      > .category-buildings {
+        bottom: 75px;
+        left: 0;
+        max-height: 300px;
+        position: absolute;
+        width: 300px;
+      }
     }
   }
 }

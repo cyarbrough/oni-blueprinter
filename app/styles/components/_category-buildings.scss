@@ -1,0 +1,21 @@
+/**
+  * Styles for category-buildings component
+  */
+
+.category-buildings {
+  background: $color-building-menu-bgcolor-hover;
+  display: none;
+
+  > .title {
+    background-color: $color-building-menu-bgcolor;
+    color: $color-building-sprite-color;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 3px 5px;
+    text-transform: uppercase;
+  }
+
+  &.is-active {
+    display: block;
+  }
+}

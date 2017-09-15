@@ -2,7 +2,13 @@
 {{#if categories}}
   <ul class="category-list">
     {{#each categories as |category|}}
-      <li class="item">{{category-icon category=category}}</li>
+      <li class="item">
+        {{category-icon activeCategory=activeCategory category=category}}
+        {{#if category.buildings}}
+          <!-- sub menu -->
+          {{category-buildings activeCategory=activeCategory buildings=category.buildings category=category}}
+        {{/if}}
+      </li>
     {{/each}}
   </ul>
 {{/if}}
