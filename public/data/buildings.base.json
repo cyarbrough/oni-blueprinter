@@ -1,0 +1,451 @@
+{
+  "data": [
+    {
+      "type": "buildings",
+      "id": "1",
+      "attributes": {
+        "name": "Printing Pod",
+        "image": "/images/buildings/base_hq.png",
+        "height": 4,
+        "width": 4,
+        "order": 0
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "4",
+      "attributes": {
+        "name": "Ladder",
+        "image": "/images/buildings/base_ladder.png",
+        "height": 1,
+        "width": 1,
+        "order": 1
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "5",
+      "attributes": {
+        "name": "Fire Pole",
+        "image": "/images/buildings/base_fire_pole.png",
+        "height": 1,
+        "width": 1,
+        "order": 2
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "6",
+      "attributes": {
+        "name": "Plastic Ladder",
+        "image": "/images/buildings/base_plastic_ladder.png",
+        "height": 1,
+        "width": 1,
+        "order": 3
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "2",
+      "attributes": {
+        "name": "Tile",
+        "image": "/images/buildings/base_tile_square.png",
+        "height": 1,
+        "width": 1,
+        "order": 4
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "7",
+      "attributes": {
+        "name": "Airflow Tile",
+        "image": "/images/buildings/base_airflow_tile.png",
+        "height": 1,
+        "width": 1,
+        "order": 5
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "8",
+      "attributes": {
+        "name": "Mesh Tile",
+        "image": "/images/buildings/base_mesh_tile.png",
+        "height": 1,
+        "width": 1,
+        "order": 6
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "9",
+      "attributes": {
+        "name": "Insulated Tile",
+        "image": "/images/buildings/base_insulated_tile.png",
+        "height": 1,
+        "width": 1,
+        "order": 7
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "10",
+      "attributes": {
+        "name": "Plastic Tile",
+        "image": "/images/buildings/base_plastic_tile.png",
+        "height": 1,
+        "width": 1,
+        "order": 8
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "11",
+      "attributes": {
+        "name": "Metal Tile",
+        "image": "/images/buildings/base_metal_tile.png",
+        "height": 1,
+        "width": 1,
+        "order": 9
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "12",
+      "attributes": {
+        "name": "Window Tile",
+        "image": "/images/buildings/base_window_tile.png",
+        "height": 1,
+        "width": 1,
+        "order": 10
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "13",
+      "attributes": {
+        "name": "Bunker Tile",
+        "image": "/images/buildings/base_bunker_tile.png",
+        "height": 1,
+        "width": 1,
+        "order": 11
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "14",
+      "attributes": {
+        "name": "Pneumatic Door",
+        "image": "/images/buildings/base_pneumatic_door.png",
+        "height": 2,
+        "width": 1,
+        "order": 12
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "15",
+      "attributes": {
+        "name": "Manual Airlock",
+        "image": "/images/buildings/base_manual_airlock.png",
+        "height": 2,
+        "width": 1,
+        "order": 13
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "16",
+      "attributes": {
+        "name": "Mechanized Airlock",
+        "image": "/images/buildings/base_mechanized_airlock.png",
+        "height": 2,
+        "width": 1,
+        "order": 14
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "17",
+      "attributes": {
+        "name": "Bunker Door",
+        "image": "/images/buildings/base_bunker_door.png",
+        "height": 1,
+        "width": 4,
+        "order": 15
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "18",
+      "attributes": {
+        "name": "Storage Compactor",
+        "image": "/images/buildings/base_storage_compactor.png",
+        "height": 2,
+        "width": 1,
+        "order": 16
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "19",
+      "attributes": {
+        "name": "Smart Storage Compactor",
+        "image": "/images/buildings/base_smart_storage_compactor.png",
+        "height": 2,
+        "width": 1,
+        "order": 17
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "20",
+      "attributes": {
+        "name": "Liquid Reservoir",
+        "image": "/images/buildings/base_liquid_reservoir.png",
+        "height": 3,
+        "width": 2,
+        "order": 18
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "21",
+      "attributes": {
+        "name": "Gas Reservoir",
+        "image": "/images/buildings/base_gas_reservoir.png",
+        "height": 3,
+        "width": 5,
+        "order": 19
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "22",
+      "attributes": {
+        "name": "Transit Tube",
+        "image": "/images/buildings/base_transit_tube.png",
+        "height": 1,
+        "width": 1,
+        "order": 20
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "23",
+      "attributes": {
+        "name": "Transit Tube Access",
+        "image": "/images/buildings/base_transit_tube_access.png",
+        "height": 2,
+        "width": 3,
+        "order": 21
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    },
+    {
+      "type": "buildings",
+      "id": "24",
+      "attributes": {
+        "name": "Transit Tube Crossing",
+        "image": "/images/buildings/base_transit_tube_crossing.png",
+        "height": 1,
+        "width": 1,
+        "order": 22
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "1"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "categories",
+      "id": "1",
+      "attributes": {
+        "name": "Base",
+        "image": "/images/menus/icon_base.png"
+      }
+    }
+  ]
+}

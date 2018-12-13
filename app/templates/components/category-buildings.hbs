@@ -1,8 +1,10 @@
 <div class="title">
   {{category.name}}
 </div>
-<div class="buildings">
-  {{#each buildings as |building|}}
-    {{category-building-button building=building}}
-  {{/each}}
+<div class="buildings-outer">
+  <div class="buildings-inner">
+    {{#each buildings as |building|}}
+      {{category-building-button building=building}}
+    {{/each}}
+  </div>
 </div>

@@ -1,0 +1,32 @@
+{
+  "data": [
+    {
+      "type": "buildings",
+      "id": "3",
+      "attributes": {
+        "name": "Ration Box",
+        "image": "/images/buildings/food_ration-box.png",
+        "height": 2,
+        "width": 2
+      },
+      "relationships": {
+        "category": {
+          "data": {
+            "type": "category",
+            "id": "2"
+          }
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "categories",
+      "id": "2",
+      "attributes": {
+        "name": "Food",
+        "image": "/images/menus/icon_food.png"
+      }
+    }
+  ]
+}

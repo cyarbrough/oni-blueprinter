@@ -3,6 +3,8 @@
   */
 
 .category-buildings {
+  $title-height: 22px;
+
   background: $color-building-menu-bgcolor-hover;
   display: none;
 
@@ -10,12 +12,16 @@
     background-color: $color-building-menu-bgcolor;
     color: $color-building-sprite-color;
     font-size: 14px;
+    height: $title-height;
     letter-spacing: 1px;
     padding: 3px 5px;
     text-transform: uppercase;
   }
 
-  > .buildings {
+  > .buildings-outer {
+    max-height: 300px - $title-height;
+    overflow: hidden;
+    overflow-y: auto;
     padding: 5px 5px 0;
   }
 

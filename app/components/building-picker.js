@@ -30,7 +30,7 @@ export default Component.extend({
   actions: {
     /**
      * Sets category to activeCategory, or to null if same category
-     * @param {*} category 
+     * @param {*} category
      */
     activateCategory(category) {
       let newCategory = category;

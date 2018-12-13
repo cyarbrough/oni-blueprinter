@@ -72,7 +72,7 @@ module.exports = {
     "semi": ["error", "always"], // Semicolons are required
     "sort-vars": "warn", // Sort variables within the same declaration block (off by default)
     "space-before-function-paren": ["error", {
-      "anonymous": "always",
+      "anonymous": "never",
       "named": "never",
       "asyncArrow": "always"
     }],

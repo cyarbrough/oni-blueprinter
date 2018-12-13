@@ -70,7 +70,7 @@ export default Component.extend({
    * Class name, based on building name
    * @var string
    */
-  buildingClassName: computed('building.name', function () {
+  buildingClassName: computed('building.name', function() {
     let name = this.get('building.name');
 
     if (name) {
@@ -82,7 +82,7 @@ export default Component.extend({
    * Returns positional x and y values adjusted to grid
    * @var {x,y}
    */
-  translatedPosition: computed('position.{x,y}', 'tempPosition.{x,y}', function () {
+  translatedPosition: computed('position.{x,y}', 'tempPosition.{x,y}', function() {
     let pixelDensity = this.get('pixelDensity'),
       position = this.get('position');
 
@@ -99,7 +99,7 @@ export default Component.extend({
    * Pixel dimensions, converted from logistical dimensions
    * @var {*}
    */
-  dimensions: computed('building.{height,width}', 'pixelDensity', function () {
+  dimensions: computed('building.{height,width}', 'pixelDensity', function() {
     let building = this.get('building'),
       pixelDensity = this.get('pixelDensity');
 
@@ -117,7 +117,7 @@ export default Component.extend({
   /******************************** Functions */
   /**
    * Called when component element is dragged
-   * @param {*} e 
+   * @param {*} e
    */
   drag(e) {
     this.get('dragTask').perform(e);
@@ -125,7 +125,7 @@ export default Component.extend({
   },
   /**
    * Called when component element dragging has ended
-   * @param {*} e 
+   * @param {*} e
    */
   dragEnd(e) {
     let units = this.getUnitsFromPixels(e.clientX, e.clientY, true);
@@ -140,7 +140,7 @@ export default Component.extend({
   },
   /**
    * Dragging Task; Sets tempPosition to moved units, based on clientX and clientY
-   * @param {*} e 
+   * @param {*} e
    */
   dragTask: task(function * (e) {
     let units = this.getUnitsFromPixels(e.clientX, e.clientY, true);
@@ -150,9 +150,9 @@ export default Component.extend({
   }).restartable(),
   /**
    * Converts pixel units into more ambiguous 'grid' units, based on pixel density; optionally offsets for mouse position
-   * @param {number} x 
-   * @param {number} y 
-   * @param {boolean} mouseOffset 
+   * @param {number} x
+   * @param {number} y
+   * @param {boolean} mouseOffset
    */
   getUnitsFromPixels(x, y, mouseOffset = false) {
     let dataX = x,
@@ -174,7 +174,7 @@ export default Component.extend({
   },
   /**
    * Called when component element is clicked on; Sets offset, draggable
-   * @param {*} e 
+   * @param {*} e
    */
   mouseDown(e) {
     this.set('draggable', true);

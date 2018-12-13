@@ -11,7 +11,7 @@ export default Route.extend({
   /**
    * Takes an array of "building data" locates the building type, and loads positional data
    * Note: Building data is in format: [[1,2,3],[1,2,3]] where 1 = id, 2 = x, 3 = y
-   * @param {array} buildings 
+   * @param {array} buildings
    */
   createBuildingsTemplate(buildings) {
     let model,
@@ -19,7 +19,7 @@ export default Route.extend({
       store = this.get('store'),
       template = A();
 
-    buildings.forEach(function (building) {
+    buildings.forEach(function(building) {
       model = store.peekRecord('building', String(building[0]));
       if (model && model.get('id')) {
         position = {
@@ -32,8 +32,8 @@ export default Route.extend({
     return template;
   },
   /**
-   * Pushes data into the payload, returns 
-   * @param {*} buildingData 
+   * Pushes data into the payload, returns
+   * @param {*} buildingData
    * @return {*} model data
    */
   handleBuildingSuccess(buildingData) {
@@ -48,7 +48,7 @@ export default Route.extend({
   },
   /**
    * Checks for buildings in templateData, and passes into template builder
-   * @param {array} templateData 
+   * @param {array} templateData
    * @return {*}
    */
   handleTemplateSuccess(templateData) {
@@ -67,12 +67,12 @@ export default Route.extend({
    * Main model data for App
    */
   model() {
-    return this.get('ajax').request('data/buildings.json').then((buildingData) => { return this.handleBuildingSuccess(buildingData); });
+    return this.get('ajax').request('data/buildings.base.json').then((buildingData) => { return this.handleBuildingSuccess(buildingData); });
   },
   /**
    * Setups the controller, and loads starter template data
-   * @param {*} controller 
-   * @param {*} model 
+   * @param {*} controller
+   * @param {*} model
    */
   async setupController(controller, model) {
     this._super(controller, model);

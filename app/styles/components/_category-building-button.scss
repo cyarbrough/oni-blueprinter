@@ -11,7 +11,9 @@
   width: 32%;
 
   > .icon {
-    max-height: 100%;
+    display: block;
+    height: 60px;
+    margin: 0 auto 5px;
     max-width: 100%;
   }
 }
