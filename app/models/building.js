@@ -28,5 +28,5 @@ export default Model.extend({
   /**
    * Category for object
    */
-  category: belongsTo('category')
+  category: belongsTo('category', { async: false })
 });

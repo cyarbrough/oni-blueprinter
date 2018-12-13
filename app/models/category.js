@@ -18,5 +18,5 @@ export default Model.extend({
   /**
    * Category for object
    */
-  buildings: hasMany('building')
+  buildings: hasMany('building', { async: false })
 });

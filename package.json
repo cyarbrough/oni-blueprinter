@@ -48,6 +48,7 @@
     "ember-resolver": "^4.0.0",
     "ember-sinon": "^1.0.1",
     "ember-source": "~2.15.0",
+    "emberfire": "^2.0.10",
     "include-media": "^1.4.9",
     "loader.js": "^4.2.3",
     "normalize.css": "^7.0.0",

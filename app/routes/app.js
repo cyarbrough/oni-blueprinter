@@ -20,7 +20,7 @@ export default Route.extend({
       template = A();
 
     buildings.forEach(function(building) {
-      model = store.peekRecord('building', String(building[0]));
+      model = store.peekRecord('building', building[0]);
       if (model && model.get('id')) {
         position = {
           x: building[1],
@@ -29,22 +29,7 @@ export default Route.extend({
         template.pushObject({ model, position });
       }
     }, this);
-    return template;
-  },
-  /**
-   * Pushes data into the payload, returns
-   * @param {*} buildingData
-   * @return {*} model data
-   */
-  handleBuildingSuccess(buildingData) {
-    let store = this.get('store');
-
-    store.pushPayload(buildingData);
-
-    return {
-      buildings: store.peekAll('building'),
-      categories: store.peekAll('category')
-    };
+    this.controllerFor('app').set('templateBuildings', template);
   },
   /**
    * Checks for buildings in templateData, and passes into template builder
@@ -58,27 +43,17 @@ export default Route.extend({
     return null;
   },
   /**
-   * Loads starter template data via ajax
-   */
-  async loadTemplate() {
-    return this.get('ajax').request('data/template-starter.json').then((templateData) => { return this.handleTemplateSuccess(templateData); });
-  },
-  /**
    * Main model data for App
    */
   model() {
-    return this.get('ajax').request('data/buildings.base.json').then((buildingData) => { return this.handleBuildingSuccess(buildingData); });
-  },
-  /**
-   * Setups the controller, and loads starter template data
-   * @param {*} controller
-   * @param {*} model
-   */
-  async setupController(controller, model) {
-    this._super(controller, model);
+    let buildings = this.store.findAll('building').then(() => {
+      this.get('ajax').request('data/template-starter.json').then((templateData) => { return this.handleTemplateSuccess(templateData); });
+    });
+    let categories = this.store.findAll('category');
 
-    let template = await this.loadTemplate();
-
-    this.controllerFor('app').set('templateBuildings', template);
+    return {
+      buildings,
+      categories
+    };
   }
 });
