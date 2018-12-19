@@ -22,7 +22,7 @@ export default Component.extend({
    * Returns CSS appropriate value
    * @var string
    */
-  pixelDensityCss: computed('pixelDensity', function () {
+  pixelDensityCss: computed('pixelDensity', function() {
     return this.get('pixelDensity') + 'px';
   })
 });

@@ -4,19 +4,19 @@ import { setupTest } from 'ember-mocha';
 import Ember from 'ember';
 const { run } = Ember;
 
-describe('Unit | Route | app', function () {
+describe('Unit | Route | app', function() {
   setupTest('route:app', {
     // Specify the other units that are required for this test.
     needs: ['controller:app', 'model:building', 'model:category', 'service:ajax']
   });
 
-  it('exists', function () {
+  it('exists', function() {
     let route = this.subject();
 
     expect(route).to.be.ok;
   });
-  describe('functions', function () {
-    it('returns template from createBuildingsTemplate', function () {
+  describe('functions', function() {
+    it('returns template from createBuildingsTemplate', function() {
       let result,
         route = this.subject();
 
@@ -34,7 +34,7 @@ describe('Unit | Route | app', function () {
       expect(result[1].position.x).to.be.equal(5);
       expect(result[1].position.y).to.be.equal(6);
     });
-    it('returns empty data from createBuildingsTemplate', function () {
+    it('returns empty data from createBuildingsTemplate', function() {
       let result,
         route = this.subject();
 
@@ -42,7 +42,7 @@ describe('Unit | Route | app', function () {
 
       expect(result.length).to.be.equal(0);
     });
-    it('returns buildings & categories from handleBuildingSuccess', function () {
+    it('returns buildings & categories from handleBuildingSuccess', function() {
       let data = {
           'data': [
             {
@@ -90,7 +90,7 @@ describe('Unit | Route | app', function () {
       expect(result.buildings.get('length')).to.be.equal(2);
       expect(result.categories.get('length')).to.be.equal(1);
     });
-    it('returns template from handleTemplateSuccess', function () {
+    it('returns template from handleTemplateSuccess', function() {
       let data = {
           buildings: [1]
         },
@@ -105,7 +105,7 @@ describe('Unit | Route | app', function () {
 
       expect(result[0]).to.be.equal(1);
     });
-    it('returns null from handleTemplateSuccess', function () {
+    it('returns null from handleTemplateSuccess', function() {
       let data = {
           buildings: []
         },
@@ -120,7 +120,7 @@ describe('Unit | Route | app', function () {
 
       expect(result).to.be.null;
     });
-    it('returns template from loadTemplate', async function () {
+    it('returns template from loadTemplate', async function() {
       let result,
         route = this.subject({
           ajax: {
@@ -140,7 +140,7 @@ describe('Unit | Route | app', function () {
       result = await route.loadTemplate();
       expect(result).to.be.equal('template');
     });
-    it('returns models from model', async function () {
+    it('returns models from model', async function() {
       let result,
         route = this.subject({
           ajax: {
@@ -160,7 +160,7 @@ describe('Unit | Route | app', function () {
       result = await route.model();
       expect(result).to.be.equal('models');
     });
-    it('sets templateBuildings in controller in setupController', async function () {
+    it('sets templateBuildings in controller in setupController', async function() {
       let result,
         route = this.subject({
           loadTemplate() {

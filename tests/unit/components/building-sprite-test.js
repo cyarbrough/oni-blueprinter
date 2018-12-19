@@ -5,14 +5,14 @@ import sinon from 'sinon';
 import Ember from 'ember';
 const { Object } = Ember;
 
-describe('Unit | Component | building sprite', function () {
+describe('Unit | Component | building sprite', function() {
   setupComponentTest('building-sprite', {
     // Specify the other units that are required for this test
     needs: ['service:pixel', 'component:building-sprite-css'],
     unit: true
   });
 
-  it('renders', function () {
+  it('renders', function() {
     // creates the component instance
     let component = this.subject();
     // renders the component on the page
@@ -22,13 +22,13 @@ describe('Unit | Component | building sprite', function () {
     expect(this.$()).to.have.length(1);
   });
 
-  describe('computed', function () {
-    it('returns default buildingClassName', function () {
+  describe('computed', function() {
+    it('returns default buildingClassName', function() {
       let component = this.subject();
 
       expect(component.get('buildingClassName')).to.be.null;
     });
-    it('returns buildingClassName', function () {
+    it('returns buildingClassName', function() {
       let component = this.subject({
         building: {
           name: 'test dasherize'
@@ -37,7 +37,7 @@ describe('Unit | Component | building sprite', function () {
 
       expect(component.get('buildingClassName')).to.be.equal('test-dasherize');
     });
-    it('returns translatedPosition', function () {
+    it('returns translatedPosition', function() {
       let component = this.subject({
           pixelDensity: 10,
           position: {
@@ -50,7 +50,7 @@ describe('Unit | Component | building sprite', function () {
       expect(results.x).to.be.equal('10px');
       expect(results.y).to.be.equal('20px');
     });
-    it('returns translatedPosition from tempPosition', function () {
+    it('returns translatedPosition from tempPosition', function() {
       let component = this.subject({
           pixelDensity: 10,
           position: {
@@ -68,7 +68,7 @@ describe('Unit | Component | building sprite', function () {
       expect(results.x).to.be.equal('30px');
       expect(results.y).to.be.equal('40px');
     });
-    it('returns default dimensions', function () {
+    it('returns default dimensions', function() {
       let component = this.subject({
           pixelDensity: 10
         }),
@@ -77,7 +77,7 @@ describe('Unit | Component | building sprite', function () {
       expect(result.height).to.be.equal('10px');
       expect(result.width).to.be.equal('10px');
     });
-    it('returns dimensions', function () {
+    it('returns dimensions', function() {
       let component = this.subject({
           building: Object.create({
             height: 2,
@@ -91,12 +91,12 @@ describe('Unit | Component | building sprite', function () {
       expect(result.width).to.be.equal('30px');
     });
   });
-  describe('functions', function () {
-    beforeEach(function () {
+  describe('functions', function() {
+    beforeEach(function() {
       this.spy = sinon.spy();
     });
 
-    it('performs dragTask on drag', function () {
+    it('performs dragTask on drag', function() {
       let component = this.subject({
         dragTask: {
           perform: this.spy
@@ -108,7 +108,7 @@ describe('Unit | Component | building sprite', function () {
       });
       expect(this.spy.calledTwice).to.be.true;
     });
-    it('calls resetTempPosition and sets position on dragEnd', function () {
+    it('calls resetTempPosition and sets position on dragEnd', function() {
       let component = this.subject({
         dragTask: {
           cancelAll: this.spy
@@ -128,7 +128,7 @@ describe('Unit | Component | building sprite', function () {
       expect(component.get('position.x')).to.be.equal(2);
       expect(component.get('position.y')).to.be.equal(1);
     });
-    it('sets tempPosition in dragTask', function () {
+    it('sets tempPosition in dragTask', function() {
       let component = this.subject({
         getUnitsFromPixels() {
           return { x: 3, y: 4 };
@@ -142,7 +142,7 @@ describe('Unit | Component | building sprite', function () {
       expect(component.get('tempPosition.x')).to.be.equal(3);
       expect(component.get('tempPosition.y')).to.be.equal(4);
     });
-    it('converts pixels to units in getUnitsFromPixels', function () {
+    it('converts pixels to units in getUnitsFromPixels', function() {
       let component = this.subject({
           mouseOffset: {
             x: 10,
@@ -155,7 +155,7 @@ describe('Unit | Component | building sprite', function () {
       expect(result.x).to.be.equal(10);
       expect(result.y).to.be.equal(20);
     });
-    it('converts pixels to units in getUnitsFromPixels with mouse x', function () {
+    it('converts pixels to units in getUnitsFromPixels with mouse x', function() {
       let component = this.subject({
           mouseOffset: {
             x: 10
@@ -167,7 +167,7 @@ describe('Unit | Component | building sprite', function () {
       expect(result.x).to.be.equal(9);
       expect(result.y).to.be.equal(20);
     });
-    it('converts pixels to units in getUnitsFromPixels with mouse y', function () {
+    it('converts pixels to units in getUnitsFromPixels with mouse y', function() {
       let component = this.subject({
           mouseOffset: {
             y: 10
@@ -179,7 +179,7 @@ describe('Unit | Component | building sprite', function () {
       expect(result.x).to.be.equal(10);
       expect(result.y).to.be.equal(19);
     });
-    it('converts pixels to units in getUnitsFromPixels with mouse x y', function () {
+    it('converts pixels to units in getUnitsFromPixels with mouse x y', function() {
       let component = this.subject({
           mouseOffset: {
             x: 20,
@@ -192,7 +192,7 @@ describe('Unit | Component | building sprite', function () {
       expect(result.x).to.be.equal(8);
       expect(result.y).to.be.equal(19);
     });
-    it('sets mouseOffset on mouseDown', function () {
+    it('sets mouseOffset on mouseDown', function() {
       let component = this.subject();
 
       component.mouseDown({
@@ -203,7 +203,7 @@ describe('Unit | Component | building sprite', function () {
       expect(component.get('mouseOffset.x')).to.be.equal(1);
       expect(component.get('mouseOffset.y')).to.be.equal(2);
     });
-    it('resets tempPosition on resetTempPosition', function () {
+    it('resets tempPosition on resetTempPosition', function() {
       let component = this.subject({
         tempPosition: {
           x: 10,

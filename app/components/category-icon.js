@@ -36,7 +36,7 @@ export default Component.extend({
    * Indicates if the component is active
    * @var {boolean}
    */
-  isActive: computed('activeCategory.id', function () {
+  isActive: computed('activeCategory.id', function() {
     return Boolean(this.get('activeCategory.id') === this.get('category.id'));
   }),
 

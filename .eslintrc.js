@@ -23,7 +23,7 @@ module.exports = {
     "comma-spacing": "error",
     "comma-style": "error", // Throws error if commas are like:  1 ,2 ,3
     "complexity": ["warn", {
-      "max": 3
+      "max": 5
     }], // Logic nested more than 3 blocks deep is a code smell.
     "consistent-this": ["error", "self"], // Requires that you use a consistent placeholder 'self' for this
     "dot-location": ["error", "object"], // Newline . stays on new line. Eg) myPromise /n .then() instead of myPromise. /n then()
