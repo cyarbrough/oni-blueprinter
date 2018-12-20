@@ -2,12 +2,20 @@
 'use strict';
 
 /* eslint-disable complexity */
-module.exports = function (environment) {
+module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'oni-blueprinter',
     environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: process.env.FIREBASE_API_KEY,
+      authDomain: 'oni-blueprinter.firebaseapp.com',
+      databaseURL: 'https://oni-blueprinter.firebaseio.com',
+      projectId: 'oni-blueprinter',
+      storageBucket: 'oni-blueprinter.appspot.com',
+      messagingSenderId: process.env.FIREBASE_SENDER_ID
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -27,13 +35,15 @@ module.exports = function (environment) {
 
   if (environment === 'development') {
     ENV.contentSecurityPolicy = {
-      'default-src': '\'none\'',
-      'script-src': '\'self\' \'unsafe-inline\' \'unsafe-eval\'',
+      'script-src': '\'self\' \'unsafe-inline\' \'unsafe-eval\' apis.google.com',
       'font-src': '\'self\' https://fonts.gstatic.com/',
-      'connect-src': '\'self\'',
+      'connect-src': '\'self\' wss://*.firebaseio.com https://*.googleapis.com',
       'img-src': '\'self\'',
       'style-src': '\'self\' \'unsafe-inline\' \'unsafe-eval\' https://fonts.gstatic.com/ https://fonts.googleapis.com',
-      'media-src': '\'self\''
+      'media-src': '\'self\'',
+      'frame-src': '\'self\' https://*.firebaseapp.com'
+
+      
     };
 
     // ENV.APP.LOG_RESOLVER = true;
