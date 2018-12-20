@@ -1,0 +1,21 @@
+<h1>login</h1>
+
+<form {{action 'login' 'password'}}>
+  {{input
+      type='text'
+      class='form-control'
+      value=email
+      placeholder='email'
+  }}
+  {{input
+      type='password'
+      class='form-control'
+      value=password
+      placeholder='password'
+  }}
+  {{#if session.isWorking}}
+    <button disabled='disabled'>logging in...</button>
+  {{else}}
+    <button type='submit'>login</button>
+  {{/if}}
+</form>

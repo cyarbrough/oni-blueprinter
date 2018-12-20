@@ -16,6 +16,9 @@ module.exports = function(environment) {
       storageBucket: 'oni-blueprinter.appspot.com',
       messagingSenderId: process.env.FIREBASE_SENDER_ID
     },
+    torii: {
+      sessionServiceName: 'session'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

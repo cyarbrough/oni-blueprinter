@@ -31,6 +31,7 @@
     "ember-cli-code-coverage": "^0.4.1",
     "ember-cli-content-security-policy": "^1.0.0",
     "ember-cli-dependency-checker": "^2.0.0",
+    "ember-cli-dotenv": "^2.2.1",
     "ember-cli-eslint": "^4.0.0",
     "ember-cli-htmlbars": "^2.0.1",
     "ember-cli-htmlbars-inline-precompile": "0.4.4",
@@ -54,7 +55,8 @@
     "normalize.css": "^7.0.0",
     "stylelint-config-standard": "^17.0.0",
     "stylelint-declaration-use-variable": "^1.6.0",
-    "stylelint-order": "^0.6.0"
+    "stylelint-order": "^0.6.0",
+    "torii": "^0.10.1"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
